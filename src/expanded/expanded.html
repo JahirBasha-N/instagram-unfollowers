@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaUnfollowers - Results</title>
+  <link rel="stylesheet" href="expanded.css">
+</head>
+<body>
+  <div class="expanded-container">
+    <!-- Header -->
+    <header class="expanded-header">
+      <div class="expanded-header__title">
+        <svg class="expanded-header__logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <h1>InstaUnfollowers</h1>
+      </div>
+      <div class="expanded-header__actions">
+        <button class="btn" id="btn-settings" aria-label="Open settings">Settings</button>
+      </div>
+    </header>
+
+    <!-- Content area -->
+    <div class="expanded-layout">
+      <!-- Sidebar -->
+      <nav class="expanded-sidebar" role="tablist" aria-label="Result categories">
+        <button class="sidebar-tab active" data-tab="nonFollowers" role="tab" aria-selected="true">
+          <span class="sidebar-tab__label">Don't Follow Back</span>
+          <span class="sidebar-tab__count" id="side-count-nonfollowers">0</span>
+        </button>
+        <button class="sidebar-tab" data-tab="fans" role="tab" aria-selected="false">
+          <span class="sidebar-tab__label">Fans</span>
+          <span class="sidebar-tab__count" id="side-count-fans">0</span>
+        </button>
+        <button class="sidebar-tab" data-tab="mutuals" role="tab" aria-selected="false">
+          <span class="sidebar-tab__label">Mutuals</span>
+          <span class="sidebar-tab__count" id="side-count-mutuals">0</span>
+        </button>
+      </nav>
+
+      <!-- Main content -->
+      <main class="expanded-main" role="tabpanel">
+        <!-- Stats -->
+        <div class="expanded-stats">
+          <div class="expanded-stat">
+            <span class="expanded-stat__value" id="stat-nonfollowers">0</span>
+            <span class="expanded-stat__label">Don't Follow Back</span>
+          </div>
+          <div class="expanded-stat">
+            <span class="expanded-stat__value" id="stat-fans">0</span>
+            <span class="expanded-stat__label">Fans</span>
+          </div>
+          <div class="expanded-stat">
+            <span class="expanded-stat__value" id="stat-mutuals">0</span>
+            <span class="expanded-stat__label">Mutuals</span>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="expanded-toolbar">
+          <label for="search-input" class="sr-only">Search users</label>
+          <input type="text" class="expanded-search" id="search-input" placeholder="Search username or name...">
+          <label for="sort-select" class="sr-only">Sort order</label>
+          <select class="expanded-sort" id="sort-select">
+            <option value="username-asc">Username A-Z</option>
+            <option value="username-desc">Username Z-A</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+          </select>
+          <div class="expanded-filters">
+            <button class="filter-chip" data-filter="verified" aria-pressed="false">Verified</button>
+            <button class="filter-chip" data-filter="private" aria-pressed="false">Private</button>
+          </div>
+        </div>
+
+        <!-- Loading state -->
+        <div class="expanded-loading" id="loading-state">
+          <p>Loading results from cache...</p>
+        </div>
+
+        <!-- Empty state -->
+        <div class="expanded-empty" id="empty-state" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p id="empty-text">No cached results. Run a scan from the extension popup first.</p>
+        </div>
+
+        <!-- User grid -->
+        <div class="user-grid" id="user-grid" role="list" style="display:none"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-container" class="expanded-toast-container"></div>
+
+  <script src="expanded.js" type="module"></script>
+</body>
+</html>
