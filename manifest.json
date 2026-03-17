@@ -3,7 +3,7 @@
   "name": "InstaUnfollowers",
   "version": "2.0.0",
   "description": "See who doesn't follow you back on Instagram",
-  "permissions": ["storage", "activeTab", "alarms", "notifications"],
+  "permissions": ["storage", "alarms", "notifications"],
   "host_permissions": [
     "https://www.instagram.com/*",
     "https://*.fbcdn.net/*",

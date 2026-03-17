@@ -58,7 +58,6 @@ The extension requests the following permissions, each used solely for its core 
 | Permission | Purpose |
 |---|---|
 | `storage` | Save scan results, settings, and history locally |
-| `activeTab` | Detect Instagram login status and read session data |
 | `alarms` | Keep background scans alive during long operations |
 | `notifications` | Notify you when a scan completes (optional, can be disabled) |
 | `host_permissions` | Access Instagram APIs and load profile images from Instagram's CDN |
