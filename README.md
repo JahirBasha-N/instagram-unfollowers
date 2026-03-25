@@ -36,7 +36,7 @@ A production-ready Chrome extension (MV3) to analyze your Instagram account and 
 ## 🚀 Installation
 
 ### From Chrome Web Store
-*(Coming soon)*
+https://chromewebstore.google.com/detail/fagibalogdicmlbcpdflpoafgeffommj?utm_source=item-share-cb
 
 ### Local Development
 1. Download or clone this repository
